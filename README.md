@@ -19,7 +19,39 @@ Step 5: Plot the magnitude spectrum with x-label and y-label with suitable title
 Step 6: Terminate the program.
 
 ## PROGRAM: 
+```
+%Balaji v 212223050008
+
+clc; % clear screen
+clear all; % clear screen
+close all; % close all figure windows
+
+
+wc = pi/3
+N = 23
+alpha=(N-1)/2;
+eps=0.001;
+
+%Low Pass Filter Coefficient
+n=0:1:N-1;
+hd=sin(wc*(n-alpha+eps))./(pi*(n-alpha+eps))
+
+%Bartlett Window Sequence
+n=0:1:N-1;
+wh=1-abs(n-alpha)/alpha;
+hn=hd.*wh;
+
+% Plot the Low Pass Filter with Bartlett Window Technique
+w=0:0.01:pi;
+h=freqz(hn,1,w);
+plot(w/pi,abs(h),'blue');
+```
 
 ## OUTPUT:
+<img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/456b3ef1-ce3a-4bdf-b7a4-a016e9717ffc" />
+<img width="1907" height="551" alt="image" src="https://github.com/user-attachments/assets/175427b6-dec0-4274-a02c-91b9deabab09" />
+
+
 
 ## RESULT:
+Thus, the design of low pass FIR digital filter using Bartlett Waveforms was plotted, and the output was verified
