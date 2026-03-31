@@ -54,4 +54,5 @@ plot(w/pi,abs(h),'blue');
 
 
 ## RESULT:
-Thus, the design of low pass FIR digital filter using Bartlett Waveforms was plotted, and the output was verified
+![IMG_20260331_210059](https://github.com/user-attachments/assets/553e560c-e5d3-4c4f-b3c0-023ba787d057)
+
